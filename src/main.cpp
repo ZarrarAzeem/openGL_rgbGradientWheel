@@ -26,9 +26,9 @@ const char* vertexShaderSource =
 
     "float vertexOffset = -float(gl_VertexID) * spacing;\n"
 
-    "float redValue = cos(timeValue * 1.25 + vertexOffset + 0.0) / 2.0 + 0.5;\n"
-    "float greenValue = cos(timeValue * 1.25 + vertexOffset + spacing) / 2.0 + 0.5;\n"
-    "float blueValue = cos(timeValue * 1.25 + vertexOffset + spacing * 2) / 2.0 + 0.5;\n"
+    "float redValue = cos(timeValue + vertexOffset + 0.0) / 2.0 + 0.5;\n"
+    "float greenValue = cos(timeValue + vertexOffset + spacing) / 2.0 + 0.5;\n"
+    "float blueValue = cos(timeValue + vertexOffset + spacing * 2) / 2.0 + 0.5;\n"
 
     "vertexColor = vec3(redValue, greenValue, blueValue);\n"
 "}\n";
